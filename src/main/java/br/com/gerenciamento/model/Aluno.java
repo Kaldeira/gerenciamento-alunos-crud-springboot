@@ -42,11 +42,12 @@ public class Aluno {
     @NotNull
     private Turno turno;
 
-    @Column(name = "email")
-    @Size(min = 5, max = 100, message = "O Email deve conter entre 5 a 100 caracteres")
     @NotBlank(message = "O email não pode ser vazio")
-    @NotNull
+    @Size(min = 5, max = 100, message = "O Email deve conter entre 5 a 100 caracteres")
     private String email;
+
+    @Column(name = "enade")
+    private float enade;
 
     public Long getId() {
         return id;
@@ -99,4 +100,8 @@ public class Aluno {
     public String getEmail() {return email; }
 
     public void setEmail(String email) {this.email = email; }
+
+    public float getEnade() {return enade; }
+
+    public void setEnade(float enade) {this.enade = enade; }
 }

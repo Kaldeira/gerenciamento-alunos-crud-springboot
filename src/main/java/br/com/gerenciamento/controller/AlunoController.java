@@ -78,6 +78,14 @@ public class AlunoController {
         return modelAndView;
     }
 
+    @GetMapping("enade-alunos")
+    public ModelAndView filtroEnade() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("Aluno/enadeAlunos");
+        modelAndView.addObject("alunosAtivos", alunoRepository.findByStatusAtivo());
+        return modelAndView;
+    }
+
     @GetMapping("alunos-ativos")
     public ModelAndView listaAlunosAtivos() {
         ModelAndView modelAndView = new ModelAndView();

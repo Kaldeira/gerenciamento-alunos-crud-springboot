@@ -71,15 +71,15 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-6 form-group offset-md-3">
-                        <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('email')}">
-                            <label class="validation-message" th:erros="*{email}"></label>
-                        </div>
-                        <label>Email do Aluno:</label>
-                        <input class="form-control" placeholder="Ex: realeegay@email.com" th:field="*{email}">
-                    </div>
-                </div>
+<!--                <div class="row">-->
+<!--                    <div class="col-md-6 form-group offset-md-3">-->
+<!--                        <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('email')}">-->
+<!--                            <label class="validation-message" th:erros="*{email}"></label>-->
+<!--                        </div>-->
+<!--                        <label>Email do Aluno:</label>-->
+<!--                        <input class="form-control" placeholder="Ex: realeegay@email.com" th:field="*{email}">-->
+<!--                    </div>-->
+<!--                </div>-->
 
                 <!-- Status -->
                 <div class="row">
@@ -94,6 +94,19 @@
                         </select>
                     </div>
                 </div>
+
+<!--                <div class="row">-->
+<!--                    <div class="col-md-6 form-group offset-md-3">-->
+
+<!--                        <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('enade')}">-->
+<!--                            <span class="validation-message" th:errors="*{enade}"></span>-->
+<!--                        </div>-->
+
+<!--                        <label>Nota do ENADE:</label>-->
+<!--                        <input type="number" step="0.01" class="form-control" th:field="*{enade}">-->
+
+<!--                    </div>-->
+<!--                </div>-->
 
                 <div class="d-grid gap-2 d-md-block">
                     <button type="submit" class="btn btn-outline-success">Salvar</button>
