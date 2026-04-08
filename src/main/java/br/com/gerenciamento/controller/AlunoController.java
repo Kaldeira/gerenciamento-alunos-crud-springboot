@@ -32,7 +32,7 @@ public class AlunoController {
         ModelAndView modelAndView = new ModelAndView();
         if(bindingResult.hasErrors()) {
             modelAndView.setViewName("Aluno/formAluno");
-            modelAndView.addObject("aluno");
+            modelAndView.addObject("aluno", new Aluno());
         } else {
         modelAndView.setViewName("redirect:/alunos-adicionados");
         alunoRepository.save(aluno);
@@ -82,6 +82,14 @@ public class AlunoController {
     public ModelAndView filtroEnade() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("Aluno/enadeAlunos");
+        modelAndView.addObject("alunosAtivos", alunoRepository.findByStatusAtivo());
+        return modelAndView;
+    }
+
+    @GetMapping("enade-aprovados")
+    public ModelAndView filtroAprovados() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("Aluno/alunos_media_maior_enade");
         modelAndView.addObject("alunosAtivos", alunoRepository.findByStatusAtivo());
         return modelAndView;
     }

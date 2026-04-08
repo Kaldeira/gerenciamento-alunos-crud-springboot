@@ -70,12 +70,13 @@ public class UsuarioController {
         Usuario userLogin = serviceUsuario.loginUser(usuario.getUser(), Util.md5(usuario.getSenha()));
         if(userLogin == null) {
             modelAndView.addObject("msg","Usuario não encontrado. Tente novamente");
+            return login();
         } else {
             session.setAttribute("usuarioLogado", userLogin);
             return index();
         }
 
-        return modelAndView;
+        //return modelAndView;
     }
 
     @PostMapping("/logout")

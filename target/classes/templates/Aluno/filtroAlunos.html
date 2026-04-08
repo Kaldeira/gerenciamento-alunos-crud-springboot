@@ -22,7 +22,7 @@
         <div class="row">
             <div class="card" style="width: 288px">
                 <a th:href="@{/alunos-ativos}">
-                <img class="card-img-top" src="img/alunos.ativos.jpg"/>
+                <img class="card-img-top" src="img/alunos-ativos.jpg"/>
                 </a>
             <div class="card-body">
                 <h5 class="card-title">Todos os Alunos Ativos no Sistema</h5>
@@ -39,6 +39,17 @@
                 <h5 class="card-title">Todos os Alunos Inativos no Sistema</h5>
                 <p class="card-text">Lista de todos os alunos inativos no sistema.</p>
                 <a th:href="@{/alunos-inativos}" class="btn btn-outline-primary">Clique Aqui</a>
+                </div>
+            </div>
+
+            <div class="card mx-lg-3" style="width: 288px">
+                <a th:href="@{/enade-aprovados}">
+                    <img class="card-img-top" src="img/imagem_enade.jpg"/>
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Todos os Alunos com notas maiores ou iguais a Média do ENADE</h5>
+                    <p class="card-text">Lista de todos os alunos com notas maiores ou iguais a Média do ENADE.</p>
+                    <a th:href="@{/enade-aprovados}" class="btn btn-outline-primary">Clique Aqui</a>
                 </div>
             </div>
         </div>
